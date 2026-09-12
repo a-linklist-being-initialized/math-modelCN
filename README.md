@@ -10,13 +10,14 @@
 ![Skills](https://img.shields.io/badge/Skills-13%2B-38bdf8?style=for-the-badge&labelColor=0b1e3a)
 ![Pipeline](https://img.shields.io/badge/Pipeline-6%E6%AD%A5%E5%B7%A5%E4%BD%9C%E6%B5%81-f59e0b?style=for-the-badge&labelColor=0b1e3a)
 ![Agents](https://img.shields.io/badge/Agents-dsh%20%7C%20Claude%20Code%20%7C%20Codex-ef4444?style=for-the-badge&labelColor=0b1e3a)
+![License](https://img.shields.io/github/license/a-linklist-being-initialized/math-modelCN?style=for-the-badge&color=10b981&labelColor=0b1e3a)
 
 **把「数学建模国赛」从赛题到提交，变成一条可复用的技能流水线。**
 
 从赛题分析、建模设计、编码求解、科研绘图，到论文撰写、降 AIGC、查重与验收 —— 每一步都有专门的 Skill 兜底，
 让 Agent 不再"看起来什么都会、真做起来到处漏"，而是照着流程把一篇能打的论文做出来。
 
-[📖 六步工作流](#-六步工作流) · [🧰 技能总览](#-技能总览) · [📦 快速开始](#-快速开始) · [🎨 绘图画廊](#-科研绘图模板画廊) · [📚 算法资料库](#-算法资料库)
+[📖 六步工作流](#-六步工作流) · [🧰 技能总览](#-技能总览) · [📦 快速开始](#-快速开始) · [🤖 Workbench Agent](#-数学建模-workbench-agent预设) · [🎨 绘图画廊](#-科研绘图模板画廊) · [📚 算法资料库](#-算法资料库)
 
 </div>
 
@@ -124,8 +125,8 @@
 | `数学建模算法` | **32 份算法资料**（PDF），见下方资料库清单 |
 | `数学建模竞赛网上资源.md` | 竞赛官网、工具官网与算法学习资源链接整理 |
 
-> 🤖 配套的 **数学建模 Workbench 自定义 Agent**（建模手 / 编程手 / 论文手 三角色分工流程）可显著减少提示词输入；
-> 目前它不在 `main` 分支的目录树中，见下方路线图——欢迎把它一并加入仓库，做到"克隆即用"。
+> 🤖 配套的 **数学建模 Workbench 自定义 Agent**（建模手 / 编程手 / 论文手 三角色分工）已随仓库提供 ——
+> 见 [`math-modeling-workbench/`](math-modeling-workbench/)，装进 dsh 预设目录即可获得 `mm_*` 工作流工具与 9 个内置技能。
 
 ---
 
@@ -179,6 +180,37 @@ Agent：[aigc-trace-cleaner] 10 维检测完成：C 级（约 45%），主要问
 ```
 
 </details>
+
+---
+
+## 🤖 数学建模 Workbench Agent（预设）
+
+仓库自带一个**完全自包含**的 dsh Agent 预设：装好之后，新建会话选择「**数学建模 Workbench**」，
+就能用 `mm_*` 工具驱动"三阶段 + 五门禁"的完整建模流程，无需再手打长提示词。
+
+```powershell
+# Windows：把预设复制到 dsh 预设根目录（目录名即预设 id）
+Copy-Item -Recurse .\math-modeling-workbench "$env:DSH_HOME\.agent-presets\math-modeling"
+# macOS / Linux
+cp -r ./math-modeling-workbench "$DSH_HOME/.agent-presets/math-modeling"
+```
+
+重启 dsh（或新建会话）即可在预设选择器中看到它。
+
+| 阶段 | 进入方式 | 通过门禁 |
+|---|---|---|
+| 建模手 | `mm_phase_enter phase=modeling` | `M1` 建模终检 |
+| 编程手 | `mm_phase_enter phase=programming` | `P1` 最小可运行结果 → `P2` 编程终检 |
+| 论文手 | `mm_phase_enter phase=paper` | `W1` 证据大纲 → `W2` 论文终检 |
+
+工具：`mm_project_init` · `mm_phase_enter` · `mm_todo` · `mm_state` · `mm_gate` ·
+`mm_check_deliverables` · `mm_skill_read` · `mm_complete` · `mm_log`
+
+内置技能（skill 工具直接加载）：`math-modeling`、`数据预处理R语言`、`建模思路`、`skill-creator`、
+`docx-cn`、`find-skills`、`brainstorming`、`chinese-thesis-workbench`、`paper-review`。
+
+状态持久化在 `<PROJECT_ROOT>/.math-modeling/state.json`，**跨会话可续接**。
+详细说明（目录结构 / 安装 / 工具清单 / 使用示例）见 **[`math-modeling-workbench/README.md`](math-modeling-workbench/README.md)**。
 
 ---
 
@@ -245,10 +277,16 @@ math-modelCN/
 │   └── references/
 ├── _references/                      # 📚 共享规范（写作 / 题型 / 图表）
 ├── 数学建模算法/                      # 📚 32 份算法资料 PDF
+├── math-modeling-workbench/          # 🤖 dsh Agent 预设（自包含：插件 + 9 个内置技能）
+│   ├── agent.cordis.yml              #    预设组装
+│   ├── preset.yml                    #    预设元数据（显示名）
+│   └── plugins/ · skills/            #    9 个插件 + 9 个技能知识库
 ├── 01_docx-cn__docx-cn/              # 📝 Word 文档处理技能
 ├── 02_find-skills__find-skills/      # 🔍 技能发现
 ├── 04_chinese-thesis-workbench__*/   # 🎓 中文本科论文工作台
 ├── 数学建模竞赛网上资源.md
+├── LICENSE                           # 📄 MIT（第三方组件见下方声明）
+├── THIRD-PARTY-NOTICES.md            # 📄 第三方组件与许可证
 └── skills.sh.json                    # 技能分组清单
 ```
 
@@ -293,7 +331,8 @@ math-modelCN/
 - [x] 数据预处理（R / Python）
 - [x] 科研绘图模板 11 套
 - [x] 32 份算法资料库
-- [ ] **把 Workbench 自定义 Agent 纳入 `main` 分支**（建模手 / 编程手 / 论文手，克隆即用）
+- [x] **Workbench 自定义 Agent 已随仓库提供**（建模手 / 编程手 / 论文手，[`math-modeling-workbench/`](math-modeling-workbench/)，克隆即用）
+- [x] MIT `LICENSE` + 第三方组件声明
 - [ ] 完整示例题目：从赛题到提交的全流程产物留档
 - [ ] 更多绘图模板（生存分析、贝叶斯后验、网络图、地图可视化）
 - [ ] 英文版 README 与技能说明
@@ -313,7 +352,7 @@ math-modelCN/
 
 - 数学建模竞赛对 AI 工具有明确规定：**核心建模与核心写作应由参赛者主导**，使用 AI 须按当届要求声明。请务必核对官方规则。
 - 库内算法资料与论文资源均为互联网公开整理，如涉版权问题请联系删除。
-- 本仓库当前**未声明开源许可证**；建议补充 `LICENSE` 文件，便于他人合规使用。
+- 本仓库采用 **MIT 许可证**（见 [`LICENSE`](LICENSE)）；仓库内的社区技能（`docx-cn`、`find-skills`、`chinese-thesis-workbench`、`skill-creator`）保留各自原许可证，详见 [`THIRD-PARTY-NOTICES.md`](THIRD-PARTY-NOTICES.md)。
 
 <div align="center">
 

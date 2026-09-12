@@ -1,0 +1,2 @@
+name: 数学建模 Workbench
+description: 完整实现 math-modeling-skill 三阶段工作流（建模手/编程手/论文手）、五门禁质检（M1/P1/P2/W1/W2）与固定交付物检查；提供 mm_* 工具集、状态机与完成判定。状态文件持久化在 PROJECT_ROOT/.math-modeling/state.json。
