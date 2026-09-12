@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 470" width="1240" height="470" role="img" aria-label="math-modelCN 六步工作流">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1e3a8a"/><stop offset="100%" stop-color="#0e7490"/>
+    </linearGradient>
+    <linearGradient id="s1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dbeafe"/><stop offset="100%" stop-color="#eff6ff"/></linearGradient>
+    <linearGradient id="s2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#cffafe"/><stop offset="100%" stop-color="#ecfeff"/></linearGradient>
+    <linearGradient id="s3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dcfce7"/><stop offset="100%" stop-color="#f0fdf4"/></linearGradient>
+    <linearGradient id="s4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fef3c7"/><stop offset="100%" stop-color="#fffbeb"/></linearGradient>
+    <linearGradient id="s5" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ede9fe"/><stop offset="100%" stop-color="#f5f3ff"/></linearGradient>
+    <linearGradient id="s6" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fee2e2"/><stop offset="100%" stop-color="#fef2f2"/></linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="1240" height="470" rx="18" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="0" y="0" width="1240" height="64" rx="18" fill="url(#hdr)"/>
+  <rect x="0" y="46" width="1240" height="18" fill="url(#hdr)"/>
+  <text x="32" y="41" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="24" font-weight="700" fill="#ffffff">六步工作流 · 一条命令走完全程</text>
+  <text x="1210" y="41" text-anchor="end" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="14" fill="#a5f3fc">skills.sh.json 定义顺序 · 每步产出交给下一步</text>
+
+  <!-- 步骤卡片 -->
+  <g font-family="'Segoe UI','Microsoft YaHei',sans-serif">
+    <!-- 1 -->
+    <rect x="30" y="92" width="176" height="200" rx="14" fill="url(#s1)" stroke="#93c5fd"/>
+    <circle cx="58" cy="120" r="16" fill="#2563eb"/><text x="58" y="126" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">1</text>
+    <text x="84" y="126" font-size="15" font-weight="700" fill="#1e3a8a">1start-mathmodel</text>
+    <text x="46" y="152" font-size="12.5" fill="#334155">流程入口编排：</text>
+    <text x="46" y="170" font-size="12.5" fill="#334155">问偏好 → 出计划 →</text>
+    <text x="46" y="188" font-size="12.5" fill="#334155">逐阶段调度后续技能</text>
+    <rect x="42" y="238" width="152" height="40" rx="8" fill="#ffffff" stroke="#bfdbfe"/>
+    <text x="52" y="254" font-size="11.5" fill="#1d4ed8">产出</text>
+    <text x="52" y="270" font-size="11.5" font-weight="600" fill="#1e293b">plan.md · todo.md</text>
+
+    <!-- 2 -->
+    <rect x="226" y="92" width="176" height="200" rx="14" fill="url(#s2)" stroke="#67e8f9"/>
+    <circle cx="254" cy="120" r="16" fill="#0891b2"/><text x="254" y="126" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">2</text>
+    <text x="280" y="126" font-size="15" font-weight="700" fill="#155e75">2analysis-modeling</text>
+    <text x="242" y="152" font-size="12.5" fill="#334155">赛题分析 + 建模设计：</text>
+    <text x="242" y="170" font-size="12.5" fill="#334155">子问题拆解 · 假设 · 变量</text>
+    <text x="242" y="188" font-size="12.5" fill="#334155">公式 · 目标 · 约束 · 求解</text>
+    <rect x="238" y="238" width="152" height="40" rx="8" fill="#ffffff" stroke="#a5f3fc"/>
+    <text x="248" y="254" font-size="11.5" fill="#0e7490">产出</text>
+    <text x="248" y="270" font-size="11" font-weight="600" fill="#1e293b">ANALYSIS_MODELING_REPORT.md</text>
+
+    <!-- 3 -->
+    <rect x="422" y="92" width="176" height="200" rx="14" fill="url(#s3)" stroke="#86efac"/>
+    <circle cx="450" cy="120" r="16" fill="#16a34a"/><text x="450" y="126" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">3</text>
+    <text x="476" y="126" font-size="15" font-weight="700" fill="#166534">3coding-visual</text>
+    <text x="438" y="152" font-size="12.5" fill="#334155">编码实现 + 数据图表：</text>
+    <text x="438" y="170" font-size="12.5" fill="#334155">可复现代码 · 求解验证</text>
+    <text x="438" y="188" font-size="12.5" fill="#334155">论文级图表 PDF</text>
+    <rect x="434" y="238" width="152" height="40" rx="8" fill="#ffffff" stroke="#bbf7d0"/>
+    <text x="444" y="254" font-size="11.5" fill="#15803d">产出</text>
+    <text x="444" y="270" font-size="11" font-weight="600" fill="#1e293b">RESULTS_REPORT.md · figures/</text>
+
+    <!-- 4 -->
+    <rect x="618" y="92" width="176" height="200" rx="14" fill="url(#s4)" stroke="#fcd34d"/>
+    <circle cx="646" cy="120" r="16" fill="#d97706"/><text x="646" y="126" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">4</text>
+    <text x="672" y="126" font-size="15" font-weight="700" fill="#92400e">4drawio</text>
+    <text x="634" y="152" font-size="12.5" fill="#334155">非数据图示：</text>
+    <text x="634" y="170" font-size="12.5" fill="#334155">技术路线图 · 求解流程图</text>
+    <text x="634" y="188" font-size="12.5" fill="#334155">模型结构图（可编辑）</text>
+    <rect x="630" y="238" width="152" height="40" rx="8" fill="#ffffff" stroke="#fde68a"/>
+    <text x="640" y="254" font-size="11.5" fill="#b45309">产出</text>
+    <text x="640" y="270" font-size="11" font-weight="600" fill="#1e293b">.drawio + 引用 PDF</text>
+
+    <!-- 5 -->
+    <rect x="814" y="92" width="176" height="200" rx="14" fill="url(#s5)" stroke="#c4b5fd"/>
+    <circle cx="842" cy="120" r="16" fill="#7c3aed"/><text x="842" y="126" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">5</text>
+    <text x="868" y="126" font-size="15" font-weight="700" fill="#5b21b6">5writing</text>
+    <text x="830" y="152" font-size="12.5" fill="#334155">论文撰写（三手分工）：</text>
+    <text x="830" y="170" font-size="12.5" fill="#334155">建模手 · 编程手 · 论文手</text>
+    <text x="830" y="188" font-size="12.5" fill="#334155">Typst / LaTeX 双引擎</text>
+    <rect x="826" y="238" width="152" height="40" rx="8" fill="#ffffff" stroke="#ddd6fe"/>
+    <text x="836" y="254" font-size="11.5" fill="#6d28d9">产出</text>
+    <text x="836" y="270" font-size="11" font-weight="600" fill="#1e293b">论文正文 + 编译 PDF</text>
+
+    <!-- 6 -->
+    <rect x="1010" y="92" width="200" height="200" rx="14" fill="url(#s6)" stroke="#fca5a5"/>
+    <circle cx="1038" cy="120" r="16" fill="#dc2626"/><text x="1038" y="126" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">6</text>
+    <text x="1064" y="126" font-size="15" font-weight="700" fill="#991b1b">6verity</text>
+    <text x="1026" y="152" font-size="12.5" fill="#334155">最终验证与验收：</text>
+    <text x="1026" y="170" font-size="12.5" fill="#334155">章节/图表引用/数值一致</text>
+    <text x="1026" y="188" font-size="12.5" fill="#334155">占位符 · 泄露 · 可复现</text>
+    <rect x="1022" y="238" width="176" height="40" rx="8" fill="#ffffff" stroke="#fecaca"/>
+    <text x="1032" y="254" font-size="11.5" fill="#b91c1c">产出</text>
+    <text x="1032" y="270" font-size="11" font-weight="600" fill="#1e293b">验收清单 + 提交就绪</text>
+
+    <!-- 箭头 -->
+    <g stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)" fill="none">
+      <path d="M210 192 H222"/><path d="M406 192 H418"/><path d="M602 192 H614"/>
+      <path d="M798 192 H810"/><path d="M994 192 H1006"/>
+    </g>
+  </g>
+
+  <!-- 支撑技能 -->
+  <g font-family="'Segoe UI','Microsoft YaHei',sans-serif">
+    <rect x="30" y="316" width="580" height="60" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="46" y="340" font-size="13" font-weight="700" fill="#0f172a">🩺 doctor · 开工前环境体检</text>
+    <text x="46" y="362" font-size="12" fill="#475569">检查 Python / R / LaTeX / Typst / DrawIO 等依赖，缺什么给什么安装命令</text>
+
+    <rect x="630" y="316" width="580" height="60" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="646" y="340" font-size="13" font-weight="700" fill="#0f172a">🤖 aigc-trace-cleaner · 降 AI 痕迹</text>
+    <text x="646" y="362" font-size="12" fill="#475569">10 维痕迹检测 + 2026 国赛 AI 合规 26 条自查，出报告与改写建议</text>
+
+    <rect x="30" y="390" width="580" height="60" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="46" y="414" font-size="13" font-weight="700" fill="#0f172a">🎨 mathmodel-figure-templates · 科研绘图</text>
+    <text x="46" y="436" font-size="12" fill="#475569">SHAP 蜂群图 · 云雨图 · 泰勒图 · 和弦图 · TPE 3D 曲面等即用脚本</text>
+
+    <rect x="630" y="316" width="0" height="0"/>
+    <rect x="630" y="390" width="580" height="60" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="646" y="414" font-size="13" font-weight="700" fill="#0f172a">📚 _references + 数学建模算法 · 共享知识</text>
+    <text x="646" y="436" font-size="12" fill="#475569">写作/题型/图表规范 + 32 份算法资料（规划、图论、回归、时序列…）</text>
+  </g>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="math-modelCN 数学建模国赛全流程技能库">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1e3a"/>
+      <stop offset="45%" stop-color="#123a6b"/>
+      <stop offset="100%" stop-color="#1e6f9f"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a3e635"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="300" fill="url(#bg)"/>
+  <!-- 装饰网格 -->
+  <g stroke="#7dd3fc" stroke-opacity="0.10" stroke-width="1">
+    <path d="M0 60H1200M0 120H1200M0 180H1200M0 240H1200"/>
+    <path d="M100 0V300M250 0V300M400 0V300M550 0V300M700 0V300M850 0V300M1000 0V300M1150 0V300"/>
+  </g>
+  <!-- 曲线（象征建模：拟合与预测） -->
+  <path d="M40 250 C 200 240, 260 150, 380 170 S 560 250, 700 150 S 900 60, 1160 90"
+        fill="none" stroke="url(#accent)" stroke-width="3.5" stroke-opacity="0.85" filter="url(#glow)"/>
+  <g fill="#a3e635" fill-opacity="0.9">
+    <circle cx="380" cy="170" r="5"/><circle cx="700" cy="150" r="5"/><circle cx="1010" cy="82" r="5"/>
+  </g>
+
+  <!-- 标题 -->
+  <text x="64" y="118" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="58" font-weight="700" fill="#ffffff" letter-spacing="1">math-modelCN</text>
+  <text x="66" y="160" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="22" fill="#bae6fd">数学建模国赛 · 全流程 Skill 技能库</text>
+
+  <!-- 副标题胶囊 -->
+  <g font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="15" fill="#e0f2fe">
+    <rect x="66" y="182" rx="14" ry="14" width="196" height="30" fill="url(#card)" stroke="#7dd3fc" stroke-opacity="0.45"/>
+    <text x="84" y="202">6 步工作流 · 一条流水线</text>
+    <rect x="278" y="182" rx="14" ry="14" width="176" height="30" fill="url(#card)" stroke="#7dd3fc" stroke-opacity="0.45"/>
+    <text x="296" y="202">建模手 · 编程手 · 论文手</text>
+    <rect x="470" y="182" rx="14" ry="14" width="212" height="30" fill="url(#card)" stroke="#7dd3fc" stroke-opacity="0.45"/>
+    <text x="488" y="202">降 AIGC · 查重 · 科研绘图</text>
+  </g>
+
+  <!-- 右下角徽标 -->
+  <g font-family="'Segoe UI','Microsoft YaHei',sans-serif" text-anchor="end">
+    <text x="1150" y="238" font-size="17" fill="#a3e635">从赛题 → 建模 → 编码 → 绘图 → 论文 → 验收</text>
+    <text x="1150" y="266" font-size="13" fill="#93c5fd" fill-opacity="0.9">dsh · Claude Code · Codex · 任意 Agent 可用</text>
+  </g>
+</svg>
