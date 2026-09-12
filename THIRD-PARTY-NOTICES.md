@@ -26,3 +26,19 @@
 除上表所列组件与资料外，本仓库其余内容（工作流技能 `1start-mathmodel` ~ `6verity`、`doctor`、
 `skill-prework`、`aigc-trace-cleaner`、`mathmodel-figure-templates`、`math-modeling-workbench` 预设本体、
 README 与其视觉素材等）由仓库作者创作，采用 **MIT 许可证**（见 [`LICENSE`](LICENSE)）。
+
+## 许可证适用范围（MIT 覆盖范围）
+
+[`LICENSE`](LICENSE) 中的 MIT 许可证适用于**仓库作者原创内容**：
+
+- 工作流技能：`1start-mathmodel`、`2analysis-modeling`、`3coding-visual`、`4drawio`、`5writing`、`6verity`
+- 工具技能：`doctor`、`skill-prework`、`aigc-trace-cleaner`、`mathmodel-figure-templates`
+- Agent 预设：`math-modeling-workbench/`（组装文件、插件、编排说明）
+- 仓库文档与素材：`README.md`、`assets/`、本文件
+
+**不适用** MIT 的部分（各自保留原许可证）：
+
+- `01_docx-cn__docx-cn/`、`02_find-skills__find-skills/`、`04_chinese-thesis-workbench__*/`
+- `math-modeling-workbench/skills/` 下的 `docx-cn`、`find-skills`、`chinese-thesis-workbench`、`skill-creator`
+  （含各自 `LICENSE` / `LICENSE.txt`）
+- `数学建模算法/` 及各类算法资料 PDF（公开整理，版权归原作者，仅供学习交流）

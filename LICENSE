@@ -19,18 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-## 适用范围说明 / Scope
-
-本 MIT 许可证适用于本仓库中由仓库作者创作的内容（包括但不限于：技能编排与说明文档、
-`1start-mathmodel` ~ `6verity`、`doctor`、`skill-prework`、`aigc-trace-cleaner`、
-`mathmodel-figure-templates`、`math-modeling-workbench` 预设、以及 README/视觉素材）。
-
-**第三方组件不适用本许可证**，它们保留各自原有的许可证，详见 [`THIRD-PARTY-NOTICES.md`](THIRD-PARTY-NOTICES.md)：
-`01_docx-cn__docx-cn`、`02_find-skills__find-skills`、`04_chinese-thesis-workbench__*`、
-以及 `math-modeling-workbench/skills/` 下的 `docx-cn`、`find-skills`、`chinese-thesis-workbench`、`skill-creator`。
-
-`数学建模算法/` 下的算法资料为互联网公开整理，版权归原作者所有，仅供学习交流；
-如涉版权问题请联系仓库作者删除。
